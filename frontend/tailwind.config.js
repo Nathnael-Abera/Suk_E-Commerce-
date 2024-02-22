@@ -6,7 +6,6 @@ export default {
       Poppins: ["Poppins", "sans-serif"],
       Roboto: ["Roboto", "sans-serif"],
     },
-    colors: {},
     extend: {
       screens: {
         "1000px": "1050px",
