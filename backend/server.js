@@ -1,5 +1,6 @@
 const app = require("./app.js");
 const dotenv = require("dotenv");
+const connectDB = require("./config/database");
 
 //handeling uncought exception
 process.on("uncaughtException", (err) => {
@@ -7,6 +8,7 @@ process.on("uncaughtException", (err) => {
   console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
 });
 port = process.env.PORT || 3001;
+connectDB();
 const server = app.listen(port, () =>
   console.log(`Server is running on port ${port}`)
 );
